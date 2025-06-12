@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SciClaimEval</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f4f4f4;
+      display: flex;
     }
 
     nav {
-      background-color: #007BFF; /* Blue */
-      overflow: hidden;
+      width: 200px;
+      background-color: #007BFF;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      top: 0;
     }
 
     nav a {
-      float: left;
-      display: block;
       color: #f2f2f2;
-      text-align: center;
       padding: 14px 20px;
       text-decoration: none;
+      text-align: center;
     }
 
     nav a:hover {
-      background-color: #0056b3; /* Darker blue on hover */
+      background-color: #0056b3;
       color: white;
     }
 
     .content {
-      padding: 20px;
+      margin-right: 220px; /* Space for the right nav */
+      padding: 40px;
+      text-align: center;
+      flex: 1;
     }
 
     h1 {
       color: #333;
     }
+
+    table {
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#leaderboard">Leaderboard</a>
-    <a href="#dates">Important Dates</a>
-    <a href="#organizers">Organizers</a>
-  </nav>
 
   <div class="content" id="home">
     <h1>Welcome to SciClaimEval</h1>
@@ -57,11 +63,10 @@
       This page provides information about the task, leaderboard, submission dates, and the organizing team.
     </p>
   </div>
-  
 
-  <div class="content" id="leaderboard">
-    <h1>Leaderboard</h1>
-    <p>The leaderboard will appear here with the ranking of submitted systems.</p>
+  <div class="content" id="howtoparticipate">
+    <h1>How to Participate</h1>
+    <p>Instructions on how to participate in SciClaimEval will be provided soon. Stay tuned for dataset access, submission guidelines, and evaluation criteria.</p>
   </div>
 
   <div class="content" id="dates">
@@ -101,11 +106,10 @@
       </tbody>
     </table>
   </div>
-  
 
-  <div class="content" id="organizers">
-    <h1>Organizers</h1>
-    <ul>
+  <div class="content" id="aboutus">
+    <h1>About Us</h1>
+    <ul style="list-style-type: none; padding-left: 0;">
       <li><strong>Akiko Aizawa</strong> (National Institute of Informatics) — <a href="mailto:aizawa@nii.ac.jp">aizawa@nii.ac.jp</a></li>
       <li><strong>André Greiner-Petter</strong> (University of Göttingen, Germany) — <a href="mailto:greinerpetter@gipplab.org">greinerpetter@gipplab.org</a></li>
       <li><strong>Florian Boudin</strong> (Nantes University, France) — <a href="mailto:florian.boudin@univ-nantes.fr">florian.boudin@univ-nantes.fr</a></li>
@@ -113,6 +117,13 @@
       <li><em>1–2 additional researchers from LLMs (Large Multimodal Models) and related fields — TBA</em></li>
     </ul>
   </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#howtoparticipate">How To Participate</a>
+    <a href="#dates">Important Dates</a>
+    <a href="#aboutus">About Us</a>
+  </nav>
 
 </body>
 </html>
