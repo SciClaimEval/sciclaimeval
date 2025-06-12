@@ -9,38 +9,31 @@
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f4f4f4;
-      display: flex;
     }
 
     nav {
-      width: 200px;
-      background-color: #007BFF;
+      background-color: #007BFF; /* Blue */
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
-      padding-top: 20px;
-      height: 100vh;
-      position: fixed;
-      right: 0;
-      top: 0;
+      justify-content: flex-end;
+      padding-right: 20px;
     }
 
     nav a {
+      display: block;
       color: #f2f2f2;
+      text-align: center;
       padding: 14px 20px;
       text-decoration: none;
-      text-align: center;
     }
 
     nav a:hover {
-      background-color: #0056b3;
+      background-color: #0056b3; /* Darker blue on hover */
       color: white;
     }
 
     .content {
-      margin-right: 220px; /* Space for the right nav */
-      padding: 40px;
-      text-align: center;
-      flex: 1;
+      padding: 20px 200px;
     }
 
     h1 {
@@ -48,11 +41,29 @@
     }
 
     table {
-      margin: 0 auto;
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#howtoparticipate">How To Participate</a>
+    <a href="#dates">Important Dates</a>
+    <a href="#aboutus">About Us</a>
+  </nav>
 
   <div class="content" id="home">
     <h1>Welcome to SciClaimEval</h1>
@@ -60,18 +71,18 @@
       SciClaimEval is a shared task focused on scientific claim verification. Participants will evaluate systems that assess the validity of scientific claims based on scientific evidence.
     </p>
     <p>
-      This page provides information about the task, leaderboard, submission dates, and the organizing team.
+      This page provides information about the task, submission dates, and the organizing team.
     </p>
   </div>
 
   <div class="content" id="howtoparticipate">
-    <h1>How to Participate</h1>
-    <p>Instructions on how to participate in SciClaimEval will be provided soon. Stay tuned for dataset access, submission guidelines, and evaluation criteria.</p>
+    <h1>How To Participate</h1>
+    <p>Participants will receive access to the dataset and evaluation scripts. More details are coming soon... </p>
   </div>
 
   <div class="content" id="dates">
     <h1>Important Dates</h1>
-    <table border="1" cellpadding="8" cellspacing="0">
+    <table>
       <thead>
         <tr>
           <th>Date</th>
@@ -109,7 +120,7 @@
 
   <div class="content" id="aboutus">
     <h1>About Us</h1>
-    <ul style="list-style-type: none; padding-left: 0;">
+    <ul>
       <li><strong>Akiko Aizawa</strong> (National Institute of Informatics) — <a href="mailto:aizawa@nii.ac.jp">aizawa@nii.ac.jp</a></li>
       <li><strong>André Greiner-Petter</strong> (University of Göttingen, Germany) — <a href="mailto:greinerpetter@gipplab.org">greinerpetter@gipplab.org</a></li>
       <li><strong>Florian Boudin</strong> (Nantes University, France) — <a href="mailto:florian.boudin@univ-nantes.fr">florian.boudin@univ-nantes.fr</a></li>
@@ -117,13 +128,6 @@
       <li><em>1–2 additional researchers from LLMs (Large Multimodal Models) and related fields — TBA</em></li>
     </ul>
   </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#howtoparticipate">How To Participate</a>
-    <a href="#dates">Important Dates</a>
-    <a href="#aboutus">About Us</a>
-  </nav>
 
 </body>
 </html>
